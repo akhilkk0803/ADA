@@ -48,6 +48,6 @@ if(d.find(adj[i][1])!=d.find(adj[i][2])){
 sum+=adj[i][0];
 d.Union(adj[i][1],adj[i][2]);
 }
-cout<<"The sum is"<<sum;
 }
+  cout<<"The sum is"<<sum;
 }
