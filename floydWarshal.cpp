@@ -14,12 +14,10 @@ vector<pair<int,int>>adj[v]={{{2,3}},{{0,2}},{{1,7},{3,1}},{{0,6}}};
 
  vector<vector<int>>distance(v,vector<int>(v,1e9));
  for(int i=0;i<v;i++){
+        distance[i][i]=0;
      for(auto x:adj[i]){
          distance[i][x.first]=x.second;
      }
- }
- for(int i=0;i<v;i++){
-     distance[i][i]=0;
  }
 for(int via=0;via<v;via++){
     for(int i=0;i<v;i++){
