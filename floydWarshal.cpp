@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
- int v,e;
-cout<<"Enter number of vertices and edges";
-cin>>v>>e;
+ int v=4,e=5;
+// cout<<"Enter number of vertices and edges";
+// cin>>v>>e;
 vector<pair<int,int>>adj[v]={{{2,3}},{{0,2}},{{1,7},{3,1}},{{0,6}}};
 // for(int i=0;i<e;i++){
 // int u,v,dist;
