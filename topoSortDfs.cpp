@@ -1,18 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void dfs(vector<bool>&visited,vector<int>adj[],int curr,vector<int>&ans){
+void dfs(vector<bool>&visited,vector<int>adj[],int curr,stack<int>&st){
 
 visited[curr]=true;
-
-
 for(auto x:adj[curr]){
-
 if(!visited[x]){
 dfs(visited,adj,x,ans);
 }
 }
-ans.push_back(curr);
+st.push(curr);
 }
 
 int main(){
@@ -28,8 +25,8 @@ adj[u].push_back(v);
 }
 vector<int>ans;
 dfs(visited,adj,0,ans);
-reverse(ans.begin(),ans.end());
-for(auto x:ans){
-cout<<x<<" ";
+while(!st.empty()){
+cout<<st.top();
+st.pop();
 }
 }
