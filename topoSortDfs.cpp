@@ -6,7 +6,7 @@ void dfs(vector<bool>&visited,vector<int>adj[],int curr,stack<int>&st){
 visited[curr]=true;
 for(auto x:adj[curr]){
 if(!visited[x]){
-dfs(visited,adj,x,ans);
+dfs(visited,adj,x,st);
 }
 }
 st.push(curr);
@@ -23,8 +23,8 @@ cout<<"Enter u and v";
 cin>>u>>v;
 adj[u].push_back(v);
 }
-vector<int>ans;
-dfs(visited,adj,0,ans);
+stack<int>st;
+dfs(visited,adj,0,st);
 while(!st.empty()){
 cout<<st.top();
 st.pop();
